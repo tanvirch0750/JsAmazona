@@ -1,14 +1,18 @@
+import axios from "axios";
+import Rating from "../components/Rating";
+
 const HomeScreen = {
   render: async () => {
-    const response = await fetch("http://localhost:5000/api/products", {
+    const response = await axios({
+      url: "http://localhost:5000/api/products",
       headers: {
         "Content-Type": "application/json",
       },
     });
-    if (!response || !response.ok) {
+    if (!response || response.statusText !== "OK") {
       return `<div>Error in getting data</div>`;
     }
-    const products = await response.json();
+    const products = await response.data;
     return `
          <ul class="products">
             ${products
@@ -23,6 +27,12 @@ const HomeScreen = {
                      <a href="/#/product/${product._id}"> 
                        ${product.name}
                      </a>
+                   </div>
+                   <div class="product-rating">
+                      ${Rating.render({
+                        value: product.rating,
+                        text: `${product.numReviews} reviews`,
+                      })}
                    </div>
                    <div class="product-band">
                      ${product.brand}

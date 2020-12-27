@@ -4,13 +4,23 @@
   "description": "![amazona](/frontend/images/jsamazona.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch backend --exec babel-node backend/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
   }
 }

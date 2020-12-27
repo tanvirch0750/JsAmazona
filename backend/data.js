@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable quotes */
+export default {
   products: [
     {
       _id: "1",

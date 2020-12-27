@@ -16,6 +16,26 @@ a {
   color: #203040;
   font-weight: 600;
 }
+button {
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f08040;
+  color: #fff;
+}
+.fw {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
 a:hover {
   color: #f08040;
 }
@@ -97,4 +117,58 @@ footer {
 }
 .product-price {
   font-size: 2rem;
+}
+
+/* Rating */
+.rating {
+  color: #ffc000;
+  font-size: 1.8rem;
+}
+.rating span:last-child {
+  color: #444444;
+  font-size: 1.4rem;
+}
+
+/* Product details */
+.content {
+  padding: 1rem;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.details-image {
+  flex: 2 1 60rem;
+}
+.details-image img {
+  max-width: 60rem;
+  width: 100%;
+}
+.details-info,
+.details-action {
+  flex: 1 1 30rem;
+}
+
+.details-info ul,
+.details-action ul {
+  padding: 0;
+}
+
+.details-info h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.details-info ul li,
+.details-action ul li {
+  margin-bottom: 1rem;
+}
+
+.details-action {
+  border: 0.05rem solid #808080;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
 }
